@@ -59,6 +59,22 @@ a, a:hover, a:active, a:focus
 a, input, textarea, button
   outline: none
 
+.btn
+  display: inline-block
+  text-transform: uppercase
+  +mt(.3s)
+  font-weight: 700
+  line-height: 1
+  padding: 30px
+  cursor: pointer
+  text-align: center
+  white-space: nowrap
+
+.btn-green
+  background-color: $accent-darkgreen
+  &:hover
+    background-color: darken($accent-darkgreen, 10%)
+
 //toggle-mnu
 .toggle-mnu
   display: inline-block
