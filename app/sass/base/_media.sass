@@ -3,23 +3,95 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px)
-	/**/
+@media only screen and (max-width : 1300px)
+  .logo
+    top: 6px
+  .main-mnu
+    float: right
+  .callback
+    margin-top: -20px
+    position: relative
+    .call
+      display: inline-block
+      margin-right: 40px
+    .recall
+      position: relative
+      top: -2px
 
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	/**/
+  .logo
+    top: 0
+    margin-right: 120px
+  .callback
+    margin-top: 6px
+    float: none
+    vertical-align: top
+    text-align: center
+    margin-left: auto
+    margin-right: auto
+    .call
+      display: block
+      margin-right: 0
+    .recall
+      top: 0
+      left: -10px
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	/**/
+  .main-head
+    .container
+      display: flex
+      justify-content: space-between
+
+  .logo
+    margin-right: 0
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
+
+  .logo
+    display: block
+    margin-left: auto
+    margin-right: auto
+    max-width: 204px
+
+  .main-head
+    position: relative
+    padding-bottom: 15px
+    .container
+      display: block
+
+  .toggle-mnu
+    position: absolute
+    right: 10px
+    top: 0px
+    margin-top: 12px
+    width: 30px
+    span:before
+      top: 9px
+    span:after
+      top: 18px
+    span, span:after, span:before
+      height: 3px
+    &.on span:before
+      transform: rotate(45deg) translate(0px, 0px)
+
+    &.on span:after
+      transform: rotate(-45deg) translate(6px, -7px)
+
+  .callback
+    margin-top: 20px
+    display: block
+    .call
+      display: inline-block
+      left: 12px
+    .recall
+      display: block
+      left: 0
 
 
 /* Custom, iPhone Retina */
@@ -50,6 +122,6 @@
 
 
 /* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px)
+@media only screen and (min-width : 1300px)
 	/**/
 

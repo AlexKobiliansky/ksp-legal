@@ -58,3 +58,42 @@ a, a:hover, a:active, a:focus
 
 a, input, textarea, button
   outline: none
+
+//toggle-mnu
+.toggle-mnu
+  display: inline-block
+  float: right
+  width: 40px
+  height: 40px
+  margin-top: 20px
+
+  span:after, span:before
+    content: ""
+    position: absolute
+    left: 0
+    top: 11px
+
+  span:after
+    top: 22px
+
+  span
+    position: relative
+    display: block
+
+  span, span:after, span:before
+    width: 100%
+    height: 4px
+    background-color: $accent-darkgreen
+    transition: all 0.3s
+    backface-visibility: hidden
+    border-radius: 2px
+
+  &.on span
+    background-color: transparent
+
+  &.on span:before
+    transform: rotate(45deg) translate(1px, 0px)
+
+  &.on span:after
+    transform: rotate(-45deg) translate(8px, -7px)
+//end toggle-mnu

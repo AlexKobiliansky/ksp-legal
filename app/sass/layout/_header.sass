@@ -1,0 +1,78 @@
+.main-head
+  padding: 12px 0 8px
+  border-bottom: 1px solid #dadada
+  box-shadow: 0 0px 6px #dadada
+
+.logo
+  display: inline-block
+  margin-right: 70px
+  position: relative
+
+.main-mnu
+  display: inline-block
+  vertical-align: top
+  font-size: 0
+  margin-top: 7px
+  li
+    display: inline-block
+    a
+      position: relative
+      display: inline-block
+      font-size: 14px
+      font-weight: 700
+      padding-right: 22px
+      padding-top: 18px
+      text-transform: uppercase
+      +mt(.5s)
+      &:after
+        content: ''
+        position: absolute
+        width: 56px
+        height: 5px
+        background-color: $accent-darkgreen
+        bottom: -11px
+        left: 50%
+        margin-left: -39px
+        +mt(.8s)
+        opacity: 0
+      &:hover
+        color: $accent-darkgreen
+        &:after
+          opacity: 1
+    &:last-child
+      a
+        padding-right: 0
+        &:after
+          margin-left: -27px
+
+.callback
+  display: inline-block
+  float: right
+  text-align: right
+  margin-top: 6px
+  .call
+    font-size: 24px
+    font-weight: 700
+    color: #263e4f
+    display: block
+    margin-bottom: 3px
+    +mt(.3s)
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      width: 25px
+      height: 11px
+      background: url("../img/icons/callback-icon.png") no-repeat center center
+      background-size: cover
+      left: -35px
+      top: 8px
+    &:hover
+      color: $accent-darkgreen
+  .recall
+    text-transform: uppercase
+    color: $accent-darkgreen
+    text-decoration: underline
+    &:hover
+      text-decoration: none
+
