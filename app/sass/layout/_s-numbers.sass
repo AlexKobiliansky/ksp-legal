@@ -1,0 +1,61 @@
+.s-numbers
+  padding: 45px 0 35px
+  .section-title
+    &:after
+      bottom: -30px
+  .more-link
+    margin-top: 70px
+    float: right
+
+.num-wrap
+  margin-top: 70px
+
+.num-item-wrap
+  position: relative
+  margin: 0 10px
+  &:after, &:before
+    content: ''
+    position: absolute
+    width: 35px
+    height: 35px
+    border: 2px solid #c0c0c2
+    border-right: none
+    left: 0
+  &:before
+    top: 0
+    border-bottom: none
+  &:after
+    bottom: 0
+    border-top: none
+
+.num-item
+  position: relative
+  padding: 20px 20px 20px 35px
+  &-num
+    font-size: 60px
+    font-weight: 900
+    line-height: 1
+  &-desc
+    font-size: 24px
+    font-weight: 700
+    line-height: 1
+    margin-top: 10px
+  &:after, &:before
+    content: ''
+    position: absolute
+    width: 35px
+    height: 35px
+    border: 2px solid #c0c0c2
+    border-left: none
+    right: 0
+  &:before
+    top: 0
+    border-bottom: none
+  &:after
+    bottom: 0
+    border-top:  none
+
+.num-col:nth-child(odd)
+  .num-item
+    &-num
+      color: $accent-darkgreen

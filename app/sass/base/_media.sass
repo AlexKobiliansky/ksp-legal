@@ -5,6 +5,17 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1300px)
 
+  .num-item-wrap
+    margin: 0
+
+  .num-item
+    padding-left: 20px
+    padding-right: 10px
+    &-num
+      font-size: 50px
+    &-desc
+      font-size: 20px
+
   .s-intro
     h1
       font-size: 40px
@@ -34,9 +45,21 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 
+  .s-numbers
+    .more-link
+      margin-top: 0
+
+  .num-item-wrap
+    margin: 0 10px 40px
+  .num-item
+    &-num
+      font-size: 60px
+    &-desc
+      font-size: 24px
+
   .s-intro
     background-position: 40% center
-    margin-bottom: 110px
+    padding-bottom: 110px
     h1
       font-size: 28px
       line-height: 44px
@@ -71,6 +94,24 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
+
+  .section-title
+    h3
+      font-size: 30px
+    p
+      font-size: 20px
+
+  .s-numbers
+    .more-link
+      margin-right: 25px
+
+  .num-item-wrap
+    max-width: 300px
+    margin-left: auto
+    margin-right: auto
+  .num-item
+    padding-left: 35px
+    padding-right: 20px
 
   .s-intro
     h2

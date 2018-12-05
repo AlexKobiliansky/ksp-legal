@@ -7,6 +7,8 @@ $(document).ready(function() {
     });
 
 
+    $(".num-item-desc").height('auto').equalHeights();
+
     //E-mail Ajax Send
     $("form").submit(function() { //Change
         var th = $(this);

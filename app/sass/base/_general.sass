@@ -75,6 +75,46 @@ a, input, textarea, button
   &:hover
     background-color: darken($accent-darkgreen, 10%)
 
+.section-title
+  text-align: center
+  line-height: 1.35
+  position: relative
+  h3
+    font-size: 36px
+    font-weight: 900
+    text-transform: uppercase
+  p
+    font-size: 24px
+    font-weight: 700
+  &:after
+    content: ''
+    position: absolute
+    width: 86px
+    height: 10px
+    background-color: $accent-darkgreen
+    bottom: -22px
+    left: 50%
+    margin-left: -43px
+
+.more-link
+  position: relative
+  text-transform: uppercase
+  font-weight: 700
+  line-height: 1
+  border-bottom: 1px solid #d3d3d3
+  +mt(.3s)
+  &:after
+    content: '>>'
+    font-weight: 900
+    color: $accent-brown
+    position: absolute
+    right: -22px
+    +mt(.3s)
+  &:hover
+    border-color: transparent
+    &:after
+      right: -24px
+
 //toggle-mnu
 .toggle-mnu
   display: inline-block
