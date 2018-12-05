@@ -10,21 +10,21 @@
     box-sizing: border-box
 
 *::-webkit-input-placeholder
-  color: #666
+  color: #67676a
   opacity: 1
 
 *:-moz-placeholder
-  color: #666
+  color: #67676a
   opacity: 1
 
 
 
 *::-moz-placeholder
-  color: #666
+  color: #67676a
   opacity: 1
 
 *:-ms-input-placeholder
-  color: #666
+  color: #67676a
   opacity: 1
 
 body input:focus:required:invalid,
@@ -69,9 +69,11 @@ a, input, textarea, button
   cursor: pointer
   text-align: center
   white-space: nowrap
+  border: none
 
 .btn-green
   background-color: $accent-darkgreen
+  color: #fff
   &:hover
     background-color: darken($accent-darkgreen, 10%)
 
@@ -114,6 +116,31 @@ a, input, textarea, button
     border-color: transparent
     &:after
       right: -24px
+
+.contact-form
+  background-color: #fff
+  label
+    display: block
+    input
+      width: 100%
+      font-size: 20px
+      padding-left: 16px
+      padding-right: 16px
+      border: none
+      border-bottom: 2px solid #000
+      &:focus
+        border-color: $accent-darkgreen
+        color: #000
+        &::-webkit-input-placeholder
+          color: #000
+        &:-moz-placeholder
+          color: #000
+        &::-moz-placeholder
+          color: #000
+        &:-ms-input-placeholder
+          color: #000
+
+
 
 //toggle-mnu
 .toggle-mnu
