@@ -8,12 +8,14 @@ $(document).ready(function() {
 
 
     function heightses() {
-        if ($(window).width()>=481) {
-          /**/
+        if ($(window).width()>=991) {
+            $(".service-control-title").height('auto').equalHeights();
+            $(".service-control-desc").height('auto').equalHeights();
         }
 
         $(".num-item-desc").height('auto').equalHeights();
         $(".consult-col").height('auto').equalHeights();
+
     }
 
     $(window).resize(function() {
@@ -22,6 +24,31 @@ $(document).ready(function() {
 
     heightses();
 
+
+    /**
+     * Services tabs functionality
+     */
+    $('.service-control').on('click', function (e) {
+        e.preventDefault();
+
+        var $controlList = $('.tab-list');
+        var $panel = $('.service-panel.active');
+        var $tab = $controlList.find('li.active');
+        var $link = $(this).parents("li");
+        var id = this.hash;
+
+
+        if (id && !$link.is('.active')) {
+            $panel.removeClass('active');
+            $tab.removeClass('active');
+
+            $panel = $(id).addClass('active');
+            $tab = $link.addClass('active');
+        }
+    });
+    /**
+     * End services tabs functionality
+     */
 
 
     //E-mail Ajax Send
