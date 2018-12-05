@@ -5,6 +5,9 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1300px)
 
+  .s-form.neg-margin
+    margin-top: -185px
+
   .project-item.slick-current
     transform: none
 
@@ -183,6 +186,12 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
 
+  .bottom-part
+    //display: none
+
+  .s-form.neg-margin
+    margin-top: 0
+
   .s-projects .bottom-part
     top: 0
   .projects-slider .slick-track
@@ -246,6 +255,23 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
+
+  .form-labels-wrap
+    display: block
+    label
+      width: 100%
+      margin-bottom: 30px
+      &:last-child
+        margin-bottom: 0
+
+  .contact-form
+    .btn
+      font-size: 20px
+      padding: 18px
+      width: 240px
+
+  .private-p
+    text-align: center
 
   .bottom-part
     display: none

@@ -114,8 +114,6 @@ $(document).ready(function() {
                         arrows: false,
                         slidesToShow: 1,
                         draggable: true,
-                        adaptiveHeight: true,
-                        dots: false
                     }
                 },
                 {
