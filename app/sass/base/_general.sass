@@ -59,6 +59,10 @@ a, a:hover, a:active, a:focus
 a, input, textarea, button
   outline: none
 
+.s-green
+  background-color: $accent-darkgreen
+  color: #fff
+
 .btn
   display: inline-block
   text-transform: uppercase
@@ -111,11 +115,13 @@ a, input, textarea, button
     color: $accent-brown
     position: absolute
     right: -22px
+    top: 0
     +mt(.3s)
   &:hover
     border-color: transparent
     &:after
-      right: -24px
+      transform: rotateX(180deg)
+      top: -1px
 
 .contact-form
   background-color: #fff
