@@ -1,0 +1,23 @@
+.main-foot
+  background-color: #3e4505
+  color: #fff
+  padding: 12px 0 8px
+  .main-mnu
+    li
+      a:after
+        background-color: $accent-brown
+    a:hover
+      color: $accent-brown
+  .callback
+    .call
+      color: #fff
+      &:hover
+        color: $accent-brown
+      &:before
+        background-image: url('../img/icons/callback-icon-foot.png')
+    .recall
+      color: $accent-brown
+  .toggle-mnu span, .toggle-mnu span:after, .toggle-mnu span:before
+      background-color: $accent-brown
+  .toggle-mnu.on span
+    background-color: transparent
