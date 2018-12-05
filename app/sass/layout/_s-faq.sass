@@ -1,0 +1,59 @@
+.s-faq
+  padding: 60px 0
+  box-shadow: 0 40px 50px inset #dadada
+  background: url('../img/bg-faq.png') no-repeat 6% 96%
+  background-size: 370px auto
+
+
+
+.faq-wrap
+  margin-top: 80px
+
+.faq-item
+  &-quest
+    background-color: #fff
+    font-size: 20px
+    font-weight: 700
+    padding: 14px 60px
+    box-shadow: 0 0 50px 10px #dadada
+    position: relative
+    cursor: pointer
+    +mt(.4s)
+    margin-bottom: 10px
+    &:before
+      content: ''
+      position: absolute
+      background-color: #000
+      width: 16px
+      height: 4px
+      top: 50%
+      margin-top: -2px
+      left: 20px
+      +mt(.4s)
+    &:after
+      content: ''
+      position: absolute
+      background-color: #000
+      height: 16px
+      width: 4px
+      top: 50%
+      margin-top: -8px
+      left: 26px
+      +mt(.4s)
+    &:hover
+      color: $accent-brown
+      background-color: darken(#fff, 3%)
+      &:after, &:before
+        background-color: $accent-brown
+    &.opened
+      margin-bottom: 0
+      &:after
+        display: none
+      &:before
+        background-color: $accent-brown
+  &-ans
+    padding: 20px 60px
+    display: none
+  &:first-child
+    .faq-item-ans
+      display: block

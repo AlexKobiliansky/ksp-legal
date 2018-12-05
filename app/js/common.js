@@ -56,6 +56,8 @@ $(document).ready(function() {
      * End services tabs functionality
      */
 
+    $('.faq-item:first-child').find('.faq-item-quest').addClass('opened');
+
 
     $('.projects-slider').on('afterChange init', function(event, slick, direction){
             // console.log('afterChange/init', event, slick, slick.$slides);
@@ -133,6 +135,22 @@ $(document).ready(function() {
     });
 
     $(".project-item-overlay").height('auto').equalHeights();
+
+
+    /**
+     * FAQ custom
+     */
+
+    $('.faq-item-quest').on("click", function(){
+        var th = $(this);
+
+        th.toggleClass('opened');
+        th.siblings('.faq-item-ans').slideToggle();
+
+    });
+    /**
+     * end FAQ custom
+     */
 
     //E-mail Ajax Send
     $("form").submit(function() { //Change
