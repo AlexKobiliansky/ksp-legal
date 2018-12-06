@@ -1,10 +1,50 @@
 $(document).ready(function() {
+    //
+    // $(".toggle-mnu").click(function() {
+    //     $(this).toggleClass("on");
+    //     $(".mobile-mnu").slideToggle();
+    //     return false;
+    // });
 
-    $(".toggle-mnu").click(function() {
+
+
+    /**
+     * mobile-mnu customization
+     */
+    var $toggleMenu = $(".toggle-mnu");
+
+    $toggleMenu.click(function() {
         $(this).toggleClass("on");
-        $(".mobile-mnu").slideToggle();
-        return false;
+        // return false;
     });
+
+    var $mmenu = $("#mobile-mnu").mmenu({
+        "navbar": {
+            "title" : "",
+        },
+        "extensions": [
+            "position-right",
+            "theme-dark",
+            "pagedim-black",
+        ],
+    }, {
+        offCanvas: {
+            pageSelector: "#page-content"
+        },
+    });
+
+    var API = $mmenu.data("mmenu");
+
+    API.bind( "close:start", function() {
+        setTimeout(function() {
+            $toggleMenu.removeClass( "on" );
+        }, 300);
+    });
+
+
+    /**
+     * end mobile-mnu customization
+     */
 
 
     function heightses() {
@@ -151,9 +191,6 @@ $(document).ready(function() {
     /**
      * end FAQ custom
      */
-
-    $('.parallax').stellar();
-
 
 
     //E-mail Ajax Send
