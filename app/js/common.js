@@ -183,9 +183,19 @@ $(document).ready(function() {
 
     $('.faq-item-quest').on("click", function(){
         var th = $(this);
+        var parent = th.parents('.faq-item');
+
 
         th.toggleClass('opened');
         th.siblings('.faq-item-ans').slideToggle();
+
+        parent.siblings('.faq-item').each(function(){
+           $(this).find('.faq-item-quest').removeClass('opened');
+           $(this).find('.faq-item-ans').slideUp();
+        });
+        // parent.siblings('faq-item').find('.faq-item-quest').removeClass('opened');
+        // parent.siblings('faq-item').find('.faq-item-ans').slideUp();
+
 
     });
     /**
