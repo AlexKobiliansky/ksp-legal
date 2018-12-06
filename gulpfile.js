@@ -31,6 +31,7 @@ gulp.task('js', ['common-js'], function() {
         'app/libs/equalHeights/jquery.equalheights.min.js',
         'app/libs/slick-slider/slick.min.js',
         'app/libs/matchHeight/jquery.matchHeight-min.js',
+        'app/libs/stellar/jquery.stellar.js',
 		'app/js/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js')) // минимизируем и соединяем в один файл
