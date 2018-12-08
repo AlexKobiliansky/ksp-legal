@@ -60,6 +60,7 @@ $(document).ready(function() {
         $(".num-item-desc").height('auto').equalHeights();
         $(".consult-col").height('auto').equalHeights();
 
+        $('.serv-col').height('auto').equalHeights();
 
 
     }

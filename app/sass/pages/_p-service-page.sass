@@ -1,0 +1,32 @@
+.serv-content
+  padding: 50px 0
+  background-color: #fff
+
+.serv-sidebar
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    width: 83px
+    height: 100%
+    background-color: $accent-creamy
+    right: -81px
+    top: 0
+
+.serv-controls
+  margin-top: 55px
+  padding-left: 25px
+  ul
+    border-top: 1px solid #000
+  a
+    display: block
+    color: #000
+    font-size: 14px
+    font-weight: 900
+    padding: 12px 0
+    border-bottom: 1px solid #000
+    text-transform: uppercase
+    +mt(.3s)
+    &:hover
+      color: $accent-brown
+
