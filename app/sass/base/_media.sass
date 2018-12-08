@@ -4,6 +4,10 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1300px)
+  .page-righttail-bigger
+    width: calc(100% - calc((100% - 940px)/ 2 - 80px))
+    left: calc((100% - 940px)/ 2 - 80px)
+
 
   .par-viz-1
     right: -300px
@@ -117,6 +121,15 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 
+  .page-title
+    margin-bottom: 60px
+
+  .page-righttail-bigger
+    width: 100%
+    left: 0
+    .container
+      margin-left: auto
+
   .par-stamp
     left: -220px
     top: -200px
@@ -205,6 +218,11 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
 
+  .page-title
+    font-size: 30px
+    padding-top: 30px
+    margin-bottom: 50px
+
   .par-viz-1, .par-viz-2, .par-viz-3
     display: none
 
@@ -289,6 +307,12 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
+
+  .page-title
+    font-size: 26px
+
+  h4
+    font-size: 18px
 
   .project-links
     .text
