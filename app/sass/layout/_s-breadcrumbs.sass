@@ -1,0 +1,31 @@
+.s-breadcrumbs
+  line-height: 1
+  font-size: 11px
+  color: #000
+  font-weight: 700
+  text-transform: uppercase
+  padding: 22px 18px
+  a
+    display: inline-block
+    margin: 0 12px
+    position: relative
+    +mt(.3s)
+    &:hover
+      color: #969696
+    &:after
+      content: ''
+      position: absolute
+      width: 5px
+      height: 5px
+      transform: rotate(45deg)
+      background-color: #000
+      top: calc(50% - 2.5px)
+      right: -15px
+    &:first-child
+      color: #969696
+      margin-left: 0
+      &:after
+        background-color: #969696
+    &:last-child
+      &:after
+        display: none
