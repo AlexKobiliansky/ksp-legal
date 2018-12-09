@@ -97,6 +97,49 @@ $(document).ready(function() {
      * End services tabs functionality
      */
 
+
+    /**
+     * SERV tabs functionality
+     */
+    $('.serv-controls a').on('click', function(e){
+        e.preventDefault()
+       var th = $(this),
+           parentList = th.parents('li'),
+           id = th.attr('href'),
+           activeList = $('.serv-controls li.active'),
+           activeTab = $('.serv-panel.active');
+
+        if(id && !parentList.is('.active')) {
+            activeList.removeClass('active');
+            activeTab.removeClass('active');
+
+            parentList.addClass('active');
+            $('.serv-panel').each(function(){
+                var p = $(this),
+                    pid = p.data('id');
+
+                if (id === pid) {
+                    p.addClass('active')
+
+
+                    if ($(window).width()<768) {
+                        $('html, body').animate({
+                            scrollTop: $('.anchors').offset().top
+                        }, 600);
+                    }
+                }
+            });
+            heightses();
+        }
+    });
+
+    /**
+     * end SERV tabs functionality
+     */
+
+
+
+
     $('.faq-item:first-child').find('.faq-item-quest').addClass('opened');
 
 

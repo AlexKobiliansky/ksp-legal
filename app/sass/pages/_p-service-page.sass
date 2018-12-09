@@ -4,6 +4,7 @@
 
 .serv-sidebar
   position: relative
+  padding-bottom: 70px
   &:after
     content: ''
     position: absolute
@@ -29,4 +30,11 @@
     +mt(.3s)
     &:hover
       color: $accent-brown
+  li.active
+    a
+      color: $accent-brown
 
+.serv-panel
+  display: none
+  &.active
+    display: block
