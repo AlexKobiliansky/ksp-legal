@@ -40,12 +40,13 @@ $(document).ready(function() {
             $toggleMenu.removeClass( "on" );
         }, 300);
     });
-
-
     /**
      * end mobile-mnu customization
      */
 
+
+    $('.serv-controls li:first-child').addClass('active');
+    $('.serv-panel:first-child').addClass('active');
 
     function heightses() {
         if ($(window).width()>=991) {
@@ -101,6 +102,7 @@ $(document).ready(function() {
     /**
      * SERV tabs functionality
      */
+
     $('.serv-controls a').on('click', function(e){
         e.preventDefault()
        var th = $(this),

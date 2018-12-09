@@ -155,6 +155,34 @@ a, input, textarea, button
         &:-ms-input-placeholder
           color: #000
 
+.dark-form
+  .contact-form
+    background-color: #3f3f41
+    label
+      input
+        background-color: #3f3f41
+        color: #fff
+        border-color: #8a8a8e
+        &::-webkit-input-placeholder
+          color: #8a8a8e
+        &:-moz-placeholder
+          color: #8a8a8e
+        &::-moz-placeholder
+          color: #8a8a8e
+        &:-ms-input-placeholder
+          color: #8a8a8e
+        &:focus
+          border-color: $accent-darkgreen
+          &::-webkit-input-placeholder
+            color: #fff
+          &:-moz-placeholder
+            color: #fff
+          &::-moz-placeholder
+            color: #fff
+          &:-ms-input-placeholder
+            color: #fff
+
+
 .form-labels-wrap
   display: flex
   justify-content: space-between
