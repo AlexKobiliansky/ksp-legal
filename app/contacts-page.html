@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-
     <title>Title</title>
     <meta name="description" content="">
 
@@ -31,6 +30,13 @@
     <![endif]-->
 
     <style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
+
+    <style>
+        [class*="ymaps-2"][class*="-ground-pane"] {
+            filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+            -webkit-filter: grayscale(100%);
+        }
+    </style>
 
 </head>
 
@@ -104,9 +110,8 @@
     </section>
     <!-- ======= END BREADCRUMBS ======= -->
 
-
-
     <div class="page-body contacts-page s-white ">
+        <!-- ======= PAGE HEAD ======= -->
         <section class="page-head page-center-bigger s-verygreen">
             <div class="container">
                 <div class="page-title">Контакты</div>
@@ -140,19 +145,19 @@
                 </div>
             </div>
         </section>
+        <!-- ======= END PAGE HEAD ======= -->
+
+        <!-- ======= SECTION MAP ======= -->
+        <section class="s-map s-creamy">
+            <div id="map" data-att="55.799644" data-long="37.544779" data-zoom="15" data-marker="img/map-marker.png"></div>
+        </section>
+        <!-- ======= END SECTION MAP ======= -->
 
     </div>
 
     <!-- ======= SECTION FORM ======= -->
-    <section class="s-form dark-form">
+    <section class="s-form">
         <div class="container">
-            <!-- parallax -->
-            <div class="parallax" data-node="parallax" data-totop="100" data-tobot="100">
-                <div style="margin-top: 10px;"></div>
-
-                <img src="img/par-services-pen.png" class="par-serv-pen">
-            </div>
-            <!-- /parallax -->
             <div class="section-title">
                 <h3>Остались вопросы?</h3>
                 <p>Оставьте заявку и я отвечу на все интересующие Вас вопросы!</p>
@@ -222,6 +227,7 @@
 <!-- /page-content -->
 
 <link rel="stylesheet" href="css/main.min.css">
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 <script src="js/scripts.min.js"></script>
 
 </body>

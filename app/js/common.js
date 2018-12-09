@@ -468,6 +468,48 @@ $(document).ready(function() {
     $('.preloader').fadeOut(600);
 
 
+    /**
+     * map
+     */
+    ymaps.ready(function(){
+        var mapId = $('#map'),
+            attitude = mapId.data("att"),
+            longtitude = mapId.data("long"),
+            zoom = mapId.data("zoom"),
+            marker = mapId.data("marker"),
+            map = new ymaps.Map("map", {
+                center: [attitude, longtitude],
+                controls: ['zoomControl'],
+                zoom: zoom
+            }),
+
+            myPlacemark = new ymaps.Placemark(map.getCenter(), {
+                hintContent: 'Собственный значок метки',
+                balloonContent: 'Это красивая метка'
+            }, {
+                // Опции.
+                // Необходимо указать данный тип макета.
+                iconLayout: 'default#image',
+                // Своё изображение иконки метки.
+                iconImageHref: marker,
+                // Размеры метки.
+                iconImageSize: [33, 51],
+                // Смещение левого верхнего угла иконки относительно
+                // её "ножки" (точки привязки).
+                iconImageOffset: [-5, -38]
+            });
+
+        map.geoObjects.add(myPlacemark);
+        map.behaviors.disable('scrollZoom');
+
+        if ($(window).width() <= 480) {
+            map.behaviors.disable('drag');
+        }
+    });
+    /**
+     * END map
+     */
+
 
 
 });
