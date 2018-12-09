@@ -469,11 +469,58 @@ $(document).ready(function() {
 
 
     /**
-     * map
+     * youtube script
      */
+//youtube script
+    var tag = document.createElement('script');
+    tag.src = "//www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
+    var videoPlayer;
+
+
+    onYouTubeIframeAPIReady = function () {
+        $('.video-player .you-player').each(function(){
+            var $playerID = $(this).attr("id");
+            var $videoID = $(this).parents('.video-player').data("video");
+            var $start = $(this).siblings('.start-video');
+
+
+            videoPlayer = new YT.Player('videoPlayer', {
+                videoId: $videoID,
+                playerVars: {
+                    'autoplay': 0,
+                    'rel': 0,
+                    'showinfo': 0
+                },
+                events: {
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+
+
+            $start.on('click', function(){
+                $(this).hide();
+                $(this).siblings('.you-player').show();
+                $(this).siblings('.thumbnail_container').hide();
+                videoPlayer.playVideo();
+            });
+        });
+    };
+
+    var p = document.getElementsByClassName("you-player");
+    $(p).hide();
+
+    onPlayerStateChange = function (event) {
+        if (event.data == YT.PlayerState.ENDED) {
+            $('.you-player').hide();
+            $('.start-video').fadeIn('normal');
+            $('.thumbnail_container').fadeIn('normal');
+        }
+    };
     /**
-     * END map
+     * end youtube script
      */
 
 

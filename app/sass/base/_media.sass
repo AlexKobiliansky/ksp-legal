@@ -140,6 +140,14 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 
+  .start-video
+    top: 60%
+    //left: 36%
+
+  .video-item
+    width: 700px
+    height: 395px
+
   .principe
     font-size: 36px
 
@@ -261,6 +269,12 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
+
+  .video-item
+    width: 100%
+    &:before
+      left: 0
+      top: 0
 
   .principe
     font-size: 28px
@@ -388,6 +402,13 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
 
+  .start-video
+    top: 68%
+    //left: 19%
+
+  .video-item
+    height: 280px
+
   .principe
     font-size: 24px
     line-height: 1.2
@@ -395,7 +416,9 @@
       left: 0
 
   .principes-desc
-    width: 70%
+    width: 100%
+    margin-top: 30px
+    padding: 0 15px
 
   .contacts-wrap
     flex-direction: column
@@ -584,6 +607,12 @@
     .recall
       display: block
       left: 0
+
+
+@media only screen and (max-width : 400px)
+  .start-video
+    font-size: 14px
+    left: calc(50% - 108px)
 
 
 /* Custom, iPhone Retina */

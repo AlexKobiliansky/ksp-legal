@@ -70,4 +70,70 @@
   width: 545px
   float: right
 
+.s-presentation
+  padding: 55px 0 35px
+
+.video-player
+  text-align: center
+  position: relative
+
+.video-item
+  width: 880px
+  height: 496px
+  margin-left: auto
+  margin-right: auto
+  position: relative
+  &:before
+    position: absolute
+    content: ''
+    width: 100%
+    height: 100%
+    border: 1px solid $accent-brown
+    left: 18px
+    top: -18px
+
+.you-player
+  position: relative
+
+.thumbnail_container
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: cover
+
+.start-video
+  cursor: pointer
+  +mt(.3s)
+  top: 57%
+  left: calc(50% - 115px)
+  position: absolute
+  text-transform: uppercase
+  font-weight: 900
+  color: $accent-brown
+  letter-spacing: 2px
+  &:before
+    content: ''
+    position: absolute
+    border: 20px solid transparent
+    border-left: 33px solid $accent-brown
+    top: -90px
+    left: calc(50% - 17px)
+    +mt(.3s)
+    z-index: 2
+  &:after
+    content: ''
+    position: absolute
+    width: 94px
+    height: 94px
+    border-radius: 50%
+    border: 1px solid $accent-brown
+    top: -117px
+    left: calc(50% - 51px)
+    +mt(.3s)
+  &:hover
+    color: darken($accent-brown, 10%)
+    &:before
+      border-left-color: darken($accent-brown, 10%)
+    &:after
+      border-color: darken($accent-brown, 10%)
+
 
