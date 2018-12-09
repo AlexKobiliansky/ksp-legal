@@ -11,6 +11,9 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1300px)
 
+  .principe
+    font-size: 42px
+
   #map
     margin-top: 0
     height: 400px
@@ -137,6 +140,15 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 
+  .principe
+    font-size: 36px
+
+  .principes-wrap
+    margin-bottom: 15px
+
+  .principes-desc
+    width: 50%
+
   .contacts-page
     .page-head
       padding-bottom: 50px
@@ -249,6 +261,13 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
+
+  .principe
+    font-size: 28px
+
+  .principes-desc
+    font-size: 13px
+    line-height: 1.5
 
   .about-img
     max-width: 240px
@@ -368,6 +387,15 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
+
+  .principe
+    font-size: 24px
+    line-height: 1.2
+    &:nth-child(1), &:nth-child(2), &:nth-child(3)
+      left: 0
+
+  .principes-desc
+    width: 70%
 
   .contacts-wrap
     flex-direction: column
