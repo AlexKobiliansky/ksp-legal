@@ -140,6 +140,10 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 
+  .ach-desc
+    &:after
+      display: none
+
   .start-video
     top: 60%
     //left: 36%
@@ -156,6 +160,8 @@
 
   .principes-desc
     width: 50%
+    &:after
+      display: none
 
   .contacts-page
     .page-head
@@ -269,6 +275,12 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
+
+  .ach-links
+    position: relative
+    padding-left: 0
+    margin-top: 50px
+    text-align: center
 
   .video-item
     width: 100%

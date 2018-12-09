@@ -58,10 +58,15 @@ $(document).ready(function() {
             $(".project-item-overlay").height('auto').equalHeights();
         }
 
+        if ($(window).width()>=769) {
+            $('.ach-item').height('auto').equalHeights();
+        }
+
         $(".num-item-desc").height('auto').equalHeights();
         $(".consult-col").height('auto').equalHeights();
 
         $('.serv-col').height('auto').equalHeights();
+
 
 
     }

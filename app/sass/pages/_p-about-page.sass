@@ -69,6 +69,15 @@
 .principes-desc
   width: 545px
   float: right
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    width: 1px
+    height: calc(100% + 112px)
+    left: -58px
+    top: -25px
+    background-color: $accent-brown
 
 .s-presentation
   padding: 55px 0 35px
@@ -137,3 +146,32 @@
       border-color: darken($accent-brown, 10%)
 
 
+.s-achievements
+  padding: 55px 0
+  position: relative
+
+.ach-item
+  position: relative
+.ach-links
+  position: absolute
+  bottom: 0
+  padding-left: 80px
+  a
+    display: block
+    text-transform: uppercase
+    font-weight: 900
+    text-decoration: underline
+    margin-bottom: 25px
+    &:hover
+      color: $accent-brown
+
+.ach-desc
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    width: 1px
+    height: calc(100% + 108px)
+    background-color: $accent-brown
+    right: -40px
+    top: -108px
