@@ -1,0 +1,31 @@
+.contacts-page
+  .page-title
+    margin-bottom: 40px
+  .page-head
+    padding-bottom: 100px
+
+.contacts-wrap
+  display: flex
+  justify-content: space-between
+
+.contact-item
+  text-align: center
+  font-size: 24px
+  margin: 0 15px
+  &:first-child
+    margin-left: 0
+  &:last-child
+    margin-right: 0
+  .phone
+    font-weight: bold
+  a
+    display: inline-block
+    border-bottom: 1px solid transparent
+    +mt(.2s)
+    &:hover
+      border-color: #a3a393
+  .svg
+    height: 45px
+    width: auto
+    margin-bottom: 20px
+    fill: $accent-darkgreen
