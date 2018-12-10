@@ -210,6 +210,31 @@ $(document).ready(function() {
      * end COSTS tabs functionality
      */
 
+
+    /**
+     * start DEALS SIDEBAR
+     */
+    $('.more-deals').on('click', function(e){
+        e.preventDefault();
+
+        var th = $(this),
+            dealList = th.siblings('.serv-controls');
+
+        if (!dealList.is('.active')) {
+            dealList.addClass('active');
+            th.text('Свернуть список');
+        } else {
+            dealList.removeClass('active');
+            th.text('Смотреть еще...')
+        }
+
+        heightses();
+    });
+
+    /**
+     * end DEALS SIDEBAR
+     */
+
     $('.faq-item:first-child').find('.faq-item-quest').addClass('opened');
 
 
