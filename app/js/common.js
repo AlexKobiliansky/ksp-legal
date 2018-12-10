@@ -283,6 +283,29 @@ $(document).ready(function() {
     });
 
 
+    $('.practices-slider').owlCarousel({
+        loop:true,
+        margin:65,
+        nav:true,
+        items: 3,
+        navText: ["Предыдущая страница", "Следующая страница"],
+        slideBy:1,
+        center: true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:2,
+                center: false
+            },
+            992:{
+                items:3
+            }
+        }
+    });
+
+
     /**
      * FAQ custom
      */

@@ -1,0 +1,64 @@
+.practice-page
+  .page-head
+    background: url('../img/bg-practice-page.png') no-repeat center center $accent-verygreen
+    background-size: cover
+    padding-bottom: 84px
+
+.practice-item
+  background-color: #fff
+  color: #000
+  text-align: center
+  padding: 50px 30px 30px
+  margin-bottom: 100px
+  position: relative
+  &:first-child
+    margin-top: 20px
+  &:last-child
+    margin-bottom: 25px
+  &:before
+    content: ''
+    position: absolute
+    width: calc(100% - 36px)
+    height: 100%
+    border: 1px solid $accent-brown
+    top: -18px
+    left: 18px
+    z-index: -1
+  &:after
+    content: ''
+    position: absolute
+    height: 1px
+    width: 200%
+    background-color: $accent-brown
+    bottom: 75px
+    left: 0
+    z-index: -1
+  &-title
+    font-size: 24px
+    font-weight: 900
+    text-transform: uppercase
+    margin-bottom: 5px
+  &-date
+    font-weight: 700
+    color: $accent-brown
+    margin-bottom: 10px
+  &-desc
+    font-size: 20px
+    height: 95px
+    overflow: hidden
+    line-height: 1.2
+  a
+    font-size: 20px
+    text-transform: uppercase
+    font-weight: 700
+    background-color: $accent-brown
+    width: 180px
+    height: 50px
+    display: inline-block
+    line-height: 50px
+    +mt(.3s)
+    position: relative
+    bottom: -55px
+    &:hover
+      background-color: #3f3f41
+      color: #fff
