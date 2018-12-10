@@ -11,6 +11,13 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1300px)
 
+  .cost-link
+    padding: 15px 15px 40px
+    &-title
+      font-size: 16px
+  .cost-item
+    padding: 25px 40px
+
   .practice-item
     padding-left: 15px
     padding-right: 15px
@@ -145,6 +152,32 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
+
+  .cost-links-wrap
+    display: flex
+    justify-content: space-between
+  .cost-link
+    width: 49%
+    &.left
+      &:after
+        border: 40px solid transparent
+        border-top: 30px solid #fff
+        bottom: -70px
+        right: calc(50% - 40px)
+        top: auto
+      &:hover, &.active
+        box-shadow: 0 10px 16px #dadada
+    &.right
+      margin-bottom: 0
+      margin-top: 40px
+      &:after
+        border: 40px solid transparent
+        border-bottom: 30px solid #fff
+        top: -70px
+        bottom: auto
+        left: calc(50% - 40px)
+      &:hover, &.active
+        box-shadow: 0 -10px 16px #dadada
 
   .ach-desc
     &:after
@@ -423,6 +456,27 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
+
+  .cost-item
+    padding: 15px 20px
+    h3
+      font-size: 20px
+
+  .cost-link
+    padding: 10px 10px 20px
+    &-desc
+      display: none
+    &-title
+      text-transform: none
+      font-size: 14px
+    &-img
+      display: table-cell
+      vertical-align: bottom
+      img
+        width: 35px
+        vertical-align: bottom
+        display: inline-block
+        margin-bottom: 15px
 
   .multi-items
     padding-bottom: 50px
