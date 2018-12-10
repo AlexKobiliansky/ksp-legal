@@ -154,6 +154,18 @@ a, input, textarea, button
           color: #000
         &:-ms-input-placeholder
           color: #000
+    &.has-error
+      input
+        border-color: red!important
+        color: red
+        &::-webkit-input-placeholder
+          color: red
+        &:-moz-placeholder
+          color: red
+        &::-moz-placeholder
+          color: red
+        &:-ms-input-placeholder
+          color: red
 
 .dark-form
   .contact-form
@@ -460,3 +472,27 @@ p
         margin-left: 8px
         color: $accent-brown
         +mt(.3s)
+
+
+//MY_MFP_ZOOM_IN
+.my-mfp-zoom-in
+  .zoom-anim-dialog, .popup-form
+    opacity: 0
+    transition: all 0.5s ease-in-out
+    transform: scale(0.7)
+  &.mfp-ready .zoom-anim-dialog, &.mfp-ready .popup-form
+    opacity: 1
+    transform: scale(1)
+  &.mfp-removing .zoom-anim-dialog, &.mfp-removing .popup-form
+    transform: scale(0.7)
+    opacity: 0
+  &.mfp-bg
+    opacity: 0
+    transition: opacity 0.5s ease-out
+  &.mfp-ready.mfp-bg
+    opacity: .7
+  &.mfp-removing.mfp-bg
+    opacity: 0
+
+
+//end MY-MFP-ZOOM-IN
