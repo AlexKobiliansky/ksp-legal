@@ -1,0 +1,71 @@
+.s-servicelist
+  counter-reset: sl-item-num
+  padding-bottom: 65px
+
+.sl-wrap
+  margin-top: 48px
+
+
+.sl-item
+  border-top: 1px solid #3f3f41
+  padding: 10px 10px 30px 30px
+  &-title
+    font-weight: 900
+    text-transform: uppercase
+    position: relative
+    margin-bottom: 10px
+    counter-increment: sl-item-num
+    &:before
+      content: counter(sl-item-num)
+      display: block
+      margin-bottom: 10px
+  &-desc
+    margin-bottom: 10px
+  a
+    font-weight: 900
+    text-transform: uppercase
+    position: relative
+    padding-left: 50px
+    display: inline-block
+    margin-top: 15px
+    text-decoration: underline
+    +mt(.3s)
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      top: calc(50% - 21px)
+      width: 38px
+      height: 38px
+      background-color: $accent-darkgreen
+      border-radius: 50%
+      border: 2px solid $accent-darkgreen
+      +mt(.3s)
+    .triangle
+      display: inline-block
+      position: relative
+      &:before
+        content: ''
+        position: absolute
+        border: 11px solid transparent
+        border-left: 17px solid #fff
+        left: -37px
+        top: -18px
+        +mt(.3s)
+      &:after
+        content: ''
+        position: absolute
+        border: 9px solid transparent
+        border-left: 14px solid $accent-darkgreen
+        left: -36px
+        top: -16px
+        +mt(.3s)
+    &:hover
+      color: $accent-darkgreen
+      &:before
+        background-color: #fff
+
+.par-sl-stamp
+  position: absolute
+  right: 50px
+  top: -230px

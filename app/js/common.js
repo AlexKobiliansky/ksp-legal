@@ -48,10 +48,11 @@ $(document).ready(function() {
 
         if ($(window).width()>=479) {
             $(".project-item-overlay").height('auto').equalHeights();
-        }
+        };
 
-        if ($(window).width()>=769) {
+        if ($(window).width()>=768) {
             $('.ach-item').height('auto').equalHeights();
+            $('.sl-item').height('auto').equalHeights();
         }
 
         $(".num-item-desc").height('auto').equalHeights();
