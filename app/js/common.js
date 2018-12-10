@@ -264,6 +264,25 @@ $(document).ready(function() {
     $(".project-item-overlay").height('auto').equalHeights();
 
 
+
+    $('.comments-slider').owlCarousel({
+        loop:true,
+        margin:18,
+        nav:true,
+        items: 2,
+        navText: ["Предыдущая страница", "Следующая страница"],
+        slideBy:1,
+        responsive:{
+            0:{
+                items:1
+            },
+            992:{
+                items:2
+            }
+        }
+    });
+
+
     /**
      * FAQ custom
      */

@@ -276,6 +276,10 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
 
+  .multi-items
+    .owl-nav
+      bottom: 30px
+
   .ach-links
     position: relative
     padding-left: 0
@@ -414,9 +418,32 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
 
+  .multi-items
+    padding-bottom: 50px
+    .owl-nav
+      display: none
+    .owl-dots
+      button.owl-dot
+        margin: 0 8px
+
+  .comments-slider
+    margin-top: 40px
+
+  .comment-item
+    display: block
+    &-img
+      display: block
+      height: 250px
+      width: 100%
+    &-content
+      padding-left: 0
+  .comment-date
+    &:after
+      width: 100%
+      left: 0
+
   .start-video
     top: 68%
-    //left: 19%
 
   .video-item
     height: 280px

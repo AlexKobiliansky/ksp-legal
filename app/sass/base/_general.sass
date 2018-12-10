@@ -182,6 +182,12 @@ a, input, textarea, button
           &:-ms-input-placeholder
             color: #fff
 
+.creamy-form
+  .contact-form
+    background-color: $accent-creamy
+    input
+      background-color: $accent-creamy
+
 
 .form-labels-wrap
   display: flex
@@ -392,6 +398,8 @@ p
 .s-dark
   background-color: #3f3f41
   color: #fff
+  .page-title
+    border-color: #fff
 
 .page-title
   font-size: 36px
@@ -401,3 +409,54 @@ p
   border-bottom: 1px solid #000
   margin-bottom: 100px
 
+
+.multi-items
+  margin-top: 60px
+  padding-bottom: 80px
+  border-bottom: 1px solid $accent-brown
+  position: relative
+  .owl-dots
+    display: inline-block
+    position: absolute
+    bottom: -50px
+    text-align: center
+    width: 100%
+    button.owl-dot
+      width: 10px
+      height: 10px
+      background-color: #555557
+      display: inline-block
+      margin: 0 5px
+      border-radius: 50%
+      &.active
+        background-color: $accent-brown
+  .owl-nav
+    position: absolute
+    bottom: -30px
+    width: 100%
+    color: #fff
+    font-weight: 900
+    z-index: 2
+    button.owl-prev, button.owl-next
+      text-transform: uppercase
+      position: absolute
+      top: 0
+      +mt(.3s)
+      &:hover
+        color: $accent-brown
+    button.owl-prev
+      left: 0
+      &:before
+        content: '<<'
+        position: relative
+        margin-right: 8px
+        color: $accent-brown
+        +mt(.3s)
+    button.owl-next
+      right: 0
+      &:after
+        content: '>>'
+        position: relative
+        margin-left: 8px
+        color: $accent-brown
+        +mt(.3s)

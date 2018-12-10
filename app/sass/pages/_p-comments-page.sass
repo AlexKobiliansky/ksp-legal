@@ -1,0 +1,99 @@
+.comments-page
+  .page-head
+    background: url('../img/bg-comments-page.png') no-repeat center center #3f3f41
+    background-size: cover
+    padding-bottom: 84px
+
+.comment-item
+  background-color: $accent-creamy
+  color: #000
+  margin-bottom: 75px
+  padding: 18px
+  display: table
+  position: relative
+  margin-left: 20px
+  &:last-child
+    margin-bottom: 20px
+  &:first-child
+    margin-top: 20px
+  &:after
+    content: ''
+    position: absolute
+    width: 240px
+    height: calc(100% + 36px)
+    left: -18px
+    top: -18px
+    border: 1px solid $accent-brown
+    z-index: -1
+  p
+    margin-bottom: 0
+
+  &-img
+    display: table-cell
+    width: 188px
+    height: 100%
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+  &-content
+    display: table-cell
+    padding-left: 40px
+    z-index: 2
+    position: relative
+  a
+    text-transform: uppercase
+    color: #000
+    font-weight: 900
+    position: relative
+    +mt(.3s)
+    &:after
+      content: '>>'
+      color: $accent-brown
+      margin-left: 8px
+      +mt(.3s)
+    &:before
+      content: ''
+      position: absolute
+      height: 1px
+      width: calc(100% - 24px)
+      background-color: #000
+      bottom: -1px
+      left: 0
+      +mt(.3s)
+    &:hover
+      color: $accent-brown
+      &:before
+        background-color: $accent-brown
+
+
+.comment-title
+  font-weight: 700
+  font-size: 24px
+  line-height: 1
+  margin-top: 10px
+  margin-bottom: 8px
+  span
+    display: block
+    text-transform: uppercase
+    font-weight: 900
+
+
+
+.comment-date
+  font-weight: 700
+  color: #6e6e6e
+  margin-bottom: 25px
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    height: 1px
+    background-color: $accent-brown
+    bottom: -15px
+    left: -60px
+    width: calc(100% + 60px)
+
+.comment-desc
+  height: 78px
+  overflow: hidden
+  margin-bottom: 15px
