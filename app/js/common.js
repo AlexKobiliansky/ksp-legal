@@ -1,5 +1,43 @@
 $(document).ready(function() {
 
+    $('.serv-controls li:first-child').addClass('active');
+    $('.serv-panel:first-child').addClass('active');
+
+
+    // Check if there's an anchor in the url
+    // if true - scroll up to the element with id in the anchor and give it class "collapsed"
+    // this functionality is dedicated for pages with collapsing items
+    if (window.location.hash){
+        var id = window.location.hash.substring(1);
+
+        $('.serv-panel').each(function(){
+            var th = $(this),
+                pid = th.data('id');
+
+            if(id === pid ) {
+                th.addClass('active')
+            } else {
+                th.removeClass('active')
+            }
+        });
+
+        $('.serv-controls a').each(function(){
+            var th = $(this),
+                parentLi = th.parents('li');
+                aid = th.attr('href');
+
+            if(id === aid ) {
+                parentLi.addClass('active')
+            } else {
+                parentLi.removeClass('active')
+            }
+        });
+
+        heightses();
+        
+    }
+
+
     /**
      * mobile-mnu customization
      */
@@ -36,9 +74,6 @@ $(document).ready(function() {
      * end mobile-mnu customization
      */
 
-
-    $('.serv-controls li:first-child').addClass('active');
-    $('.serv-panel:first-child').addClass('active');
 
     function heightses() {
         if ($(window).width()>=991) {
@@ -166,7 +201,6 @@ $(document).ready(function() {
             heightses();
         }
     });
-
     /**
      * end SERV tabs functionality
      */
