@@ -35,6 +35,12 @@ $(document).ready(function() {
 
         heightses();
 
+        if ($(window).width()<480) {
+            $('html, body').animate({
+                scrollTop: $('.page-head').offset().top -200
+            }, 600);
+        }
+
     }
 
 
@@ -48,7 +54,12 @@ $(document).ready(function() {
         // return false;
     });
 
+    var menuLogo = $('#mobile-mnu').data("logo");
     var $mmenu = $("#mobile-mnu").mmenu({
+        navbars: [{
+            content: [ "<img src=" + menuLogo + " class=\"img-responsive mm-logo\" alt=\"alt\"/>" ],
+            height: 4
+        }],
         "navbar": {
             "title" : "",
         },
