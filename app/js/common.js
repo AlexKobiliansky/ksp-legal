@@ -275,10 +275,33 @@ $(document).ready(function() {
 
         heightses();
     });
-
     /**
      * end DEALS SIDEBAR
      */
+
+
+    /**
+     * start COMMENT ROLLING
+     */
+    $('.comment-item-content a').on('click', function(e){
+        e.preventDefault();
+        var th = $(this);
+        var content = th.parents('.comment-item-content');
+
+        if(!content.is('.active')) {
+            content.addClass('active');
+            th.text('Свернуть')
+        } else {
+            content.removeClass('active');
+            th.text('Подробнее')
+        }
+
+    });
+
+    /**
+     * end COMMENT ROLLING
+     */
+
 
     /**
      * ANIMATE-NUMBER functionality
