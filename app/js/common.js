@@ -531,7 +531,6 @@ $(document).ready(function() {
                 this.horizontal = this.node.data('horizontal') ? true : false;
                 this.doc = document.documentElement;
                 this.init();
-                console.log(this);
             }
 
             Parallax.prototype.init = function() {
@@ -539,14 +538,12 @@ $(document).ready(function() {
                     if (!this.horizontal) {
                         return window.scrollList.push([this.rscroll, this]);
                     } else {
-                        console.log('hscroll');
                         return window.scrollList.push([this.hrscroll, this]);
                     }
                 } else {
                     if (!this.horizontal) {
                         return window.scrollList.push([this.scroll, this]);
                     } else {
-                        console.log('hscroll');
                         return window.scrollList.push([this.hscroll, this]);
                     }
                 }
