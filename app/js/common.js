@@ -235,6 +235,25 @@ $(document).ready(function() {
      * end DEALS SIDEBAR
      */
 
+    /**
+     * ANIMATE-NUMBER functionality
+     */
+     $('.num-item-num span').each(function(){
+        var th = $(this);
+        var number = th.data('num');
+        th.waypoint(function(){
+            th.animateNumber({ number: number }, 2000);
+            this.destroy();
+            }
+            , {
+                offset: "80%"
+            }
+        );
+     });
+    /**
+     * end ANIMATE-NUMBER functionality
+     */
+
 
     $(".user-phone").mask("+7 (999) 999-99-99",{autoclear: false});
 
