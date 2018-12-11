@@ -32,4 +32,4 @@ if ( $method === 'POST' ) {
     }
 }
 $message = "<table style='width: 100%;'>$message</table>";
-mail($admin_email, $form_subject, $message, "From: alex_kobilianskiy@alexko.zzz.com.ua" . "\r\n" . "Reply-To: $admin_email" . "\r\n" . "X-Mailer: PHP/" . phpversion() . "\r\n" . "Content-type: text/html; charset=\"utf-8\"");
+mail($admin_email, $form_subject, $message,  "Reply-To: $admin_email" . "\r\n" . "X-Mailer: PHP/" . phpversion() . "\r\n" . "Content-type: text/html; charset=\"utf-8\"");
