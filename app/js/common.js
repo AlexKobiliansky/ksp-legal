@@ -157,24 +157,27 @@ $(document).ready(function() {
     /**
      * Services tabs functionality
      */
-    $('.service-control').on('click', function (e) {
-        e.preventDefault();
+    if ($(window).width()>=479) {
+        $('.service-control').on('click', function (e) {
+            e.preventDefault();
 
-        var $controlList = $('.tab-list');
-        var $panel = $('.service-panel.active');
-        var $tab = $controlList.find('li.active');
-        var $link = $(this).parents("li");
-        var id = this.hash;
+            var $controlList = $('.tab-list');
+            var $panel = $('.service-panel.active');
+            var $tab = $controlList.find('li.active');
+            var $link = $(this).parents("li");
+            var id = this.hash;
 
 
-        if (id && !$link.is('.active')) {
-            $panel.removeClass('active');
-            $tab.removeClass('active');
+            if (id && !$link.is('.active')) {
+                $panel.removeClass('active');
+                $tab.removeClass('active');
 
-            $panel = $(id).addClass('active');
-            $tab = $link.addClass('active');
-        }
-    });
+                $panel = $(id).addClass('active');
+                $tab = $link.addClass('active');
+            }
+        });
+    };
+
     /**
      * End services tabs functionality
      */
