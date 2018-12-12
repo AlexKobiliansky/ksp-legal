@@ -2,6 +2,8 @@ $(document).ready(function() {
 
     $('.serv-controls li:first-child').addClass('active');
     $('.serv-panel:first-child').addClass('active');
+    $('.s-services .services-wrap .service-panel:first-child').addClass('active');
+    $('.tab-list.float li:first-child').addClass('active');
 
 
     // Check if there's an anchor in the url
@@ -88,8 +90,9 @@ $(document).ready(function() {
 
     function heightses() {
         if ($(window).width()>=991) {
-            $(".service-control-title").height('auto').equalHeights();
-            $(".service-control-desc").height('auto').equalHeights();
+            // $(".service-control-title").height('auto').equalHeights();
+            // $(".service-control-desc").height('auto').equalHeights();
+            $(".service-control").height('auto').equalHeights();
         }
 
         if ($(window).width()>=479) {
@@ -494,7 +497,7 @@ $(document).ready(function() {
 
         $.ajax({
             type: "POST",
-            url: "mail.php", //Change
+            url: "/mail.php", //Change
             data: th.serialize()
         }).done(function() {
             setTimeout(function() {

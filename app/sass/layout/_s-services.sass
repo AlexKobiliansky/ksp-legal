@@ -60,12 +60,32 @@
       display: block
       margin-bottom: 3px
   &-item
-    height: 340px
+    height: 348px
+    padding-right: 25px
     overflow: hidden
   .more-link
     margin-top: 30px
     display: inline-block
 
+.serv-content
+  li
+    margin-bottom: 10px
+    position: relative
+    left: 20px
+    width: calc(100% - 20px)
+    &:before
+      content: ''
+      position: absolute
+      width: 6px
+      height: 6px
+      background-color: $accent-brown
+      left: -15px
+      top: 6px
+    span
+      text-transform: uppercase
+      font-weight: 700
+      display: block
+      margin-bottom: 3px
 
 
 .tab-list
