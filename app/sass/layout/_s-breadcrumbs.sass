@@ -6,19 +6,21 @@
   text-transform: uppercase
   padding: 22px 18px
   a
-    display: inline-block
+    display: inline
     margin: 0 12px
     position: relative
     +mt(.3s)
+    color: #969696
+    line-height: 1.5
     &:hover
-      color: #969696
+      color: #000
     &:after
       content: ''
       position: absolute
       width: 5px
       height: 5px
       transform: rotate(45deg)
-      background-color: #000
+      background-color: #969696
       top: calc(50% - 2.5px)
       right: -15px
     &:first-child
@@ -26,6 +28,9 @@
       margin-left: 0
       &:after
         background-color: #969696
+      &:hover
+        color: #000
     &:last-child
+      color: #000
       &:after
         display: none

@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
-    $('.serv-controls li:first-child').addClass('active');
-    $('.serv-panel:first-child').addClass('active');
+    // $('.serv-controls li:first-child').addClass('active');
+    // $('.serv-panel:first-child').addClass('active');
     $('.s-services .services-wrap .service-panel:first-child').addClass('active');
     $('.tab-list.float li:first-child').addClass('active');
 
@@ -187,37 +187,37 @@ $(document).ready(function() {
      * SERV tabs functionality
      */
 
-    $('.serv-controls a').on('click', function(e){
-        e.preventDefault()
-       var th = $(this),
-           parentList = th.parents('li'),
-           id = th.attr('href'),
-           activeList = $('.serv-controls li.active'),
-           activeTab = $('.serv-panel.active');
-
-        if(id && !parentList.is('.active')) {
-            activeList.removeClass('active');
-            activeTab.removeClass('active');
-
-            parentList.addClass('active');
-            $('.serv-panel').each(function(){
-                var p = $(this),
-                    pid = p.data('id');
-
-                if (id === pid) {
-                    p.addClass('active')
-
-
-                    if ($(window).width()<768) {
-                        $('html, body').animate({
-                            scrollTop: $('.anchors').offset().top
-                        }, 600);
-                    }
-                }
-            });
-            heightses();
-        }
-    });
+    // $('.serv-controls a').on('click', function(e){
+    //     e.preventDefault()
+    //    var th = $(this),
+    //        parentList = th.parents('li'),
+    //        id = th.attr('href'),
+    //        activeList = $('.serv-controls li.active'),
+    //        activeTab = $('.serv-panel.active');
+    //
+    //     if(id && !parentList.is('.active')) {
+    //         activeList.removeClass('active');
+    //         activeTab.removeClass('active');
+    //
+    //         parentList.addClass('active');
+    //         $('.serv-panel').each(function(){
+    //             var p = $(this),
+    //                 pid = p.data('id');
+    //
+    //             if (id === pid) {
+    //                 p.addClass('active')
+    //
+    //
+    //                 if ($(window).width()<768) {
+    //                     $('html, body').animate({
+    //                         scrollTop: $('.anchors').offset().top
+    //                     }, 600);
+    //                 }
+    //             }
+    //         });
+    //         heightses();
+    //     }
+    // });
     /**
      * end SERV tabs functionality
      */
@@ -265,22 +265,22 @@ $(document).ready(function() {
     /**
      * start DEALS SIDEBAR
      */
-    $('.more-deals').on('click', function(e){
-        e.preventDefault();
-
-        var th = $(this),
-            dealList = th.siblings('.serv-controls');
-
-        if (!dealList.is('.active')) {
-            dealList.addClass('active');
-            th.text('Свернуть список');
-        } else {
-            dealList.removeClass('active');
-            th.text('Смотреть еще...')
-        }
-
-        heightses();
-    });
+    // $('.more-deals').on('click', function(e){
+    //     e.preventDefault();
+    //
+    //     var th = $(this),
+    //         dealList = th.siblings('.serv-controls');
+    //
+    //     if (!dealList.is('.active')) {
+    //         dealList.addClass('active');
+    //         th.text('Свернуть список');
+    //     } else {
+    //         dealList.removeClass('active');
+    //         th.text('Смотреть еще...')
+    //     }
+    //
+    //     heightses();
+    // });
     /**
      * end DEALS SIDEBAR
      */
