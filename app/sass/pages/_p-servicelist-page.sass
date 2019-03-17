@@ -9,16 +9,29 @@
 .sl-item
   border-top: 1px solid #3f3f41
   padding: 10px 10px 30px 30px
-  &-title
+  .sl-item-title
+    display: block
     font-weight: 900
     text-transform: uppercase
     position: relative
     margin-bottom: 10px
     counter-increment: sl-item-num
+    padding-left: 0
+    text-decoration: none
     &:before
       content: counter(sl-item-num)
       display: block
       margin-bottom: 10px
+      position: relative
+      background-color: transparent
+      border: transparent
+      width: auto
+      height: auto
+      text-decoration: none
+    &:hover
+      &:before
+        background-color: transparent
+        color: #000
   &-desc
     margin-bottom: 10px
   a
