@@ -49,7 +49,7 @@ gulp.task('scripts', function() {
 		'app/libs/jquery-form-validator/form-validator/jquery.form-validator.min.js',
 		'app/libs/waypoints/lib/jquery.waypoints.min.js',
 		'app/libs/animate-number/jquery.animateNumber.min.js',
-		'app/js/common.min.js', // Всегда в конце
+		'app/js/common.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
 	// .pipe(uglify()) // Mifify js (opt.)

@@ -470,6 +470,22 @@ $(document).ready(function() {
         }
     });
 
+    $('.articles-slider').owlCarousel({
+        loop:true,
+        margin:35,
+        nav:true,
+        items: 1,
+        navText: ["Предыдущая страница", "Следующая страница"],
+        slideBy:1,
+        responsive:{
+            0:{
+                items:1
+            },
+            1200:{
+                items:2,
+            }
+        }
+    });
 
     /**
      * FAQ custom
